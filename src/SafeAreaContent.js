@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Platform, StyleSheet } from "react-native";
+import { View, Platform, StyleSheet, Dimensions, StatusBar } from "react-native";
 
 export const ContentSafeArea = ({ children, style }) => {
   <View style={[localStyles.mainContainer, style]}>{children}</View>;
