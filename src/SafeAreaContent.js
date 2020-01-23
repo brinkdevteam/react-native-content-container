@@ -5,6 +5,13 @@ export const ContentSafeArea = ({ children, style }) => {
   <View style={[localStyles.mainContainer, style]}>{children}</View>;
 };
 
+function ifIphoneX(iphoneXStyle, regularStyle) {
+  if (isIphoneX()) {
+    return iphoneXStyle;
+  }
+  return regularStyle;
+}
+
 function getStatusBarHeight(safe) {
   return Platform.select({
     ios: ifIphoneX(safe ? 44 : 30, 20),
@@ -23,13 +30,6 @@ function isIphoneX() {
       dimen.width === 812 ||
       dimen.height === 896 || dimen.width === 896)
   );
-}
-
-function ifIphoneX(iphoneXStyle, regularStyle) {
-  if (isIphoneX()) {
-    return iphoneXStyle;
-  }
-  return regularStyle;
 }
 
 let topPadding;
