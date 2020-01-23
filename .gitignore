@@ -14,7 +14,6 @@ node_modules
 
 #BEGIN_NPMIGNORE_EXCLUDE
 .npmignore
-*.js
 
 # Ignore built declaration files
 *.d.ts
