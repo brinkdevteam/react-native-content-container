@@ -5,6 +5,19 @@ export const ContentSafeArea = ({ children, style }) => {
   <View style={[localStyles.mainContainer, style]}>{children}</View>;
 };
 
+
+function isIphoneX() {
+  const dimen = Dimensions.get("window");
+  return (
+    Platform.OS === "ios" &&
+    !Platform.isPad &&
+    !Platform.isTVOS &&
+    (dimen.height === 812 ||
+      dimen.width === 812 ||
+      dimen.height === 896 || dimen.width === 896)
+  );
+}
+
 function ifIphoneX(iphoneXStyle, regularStyle) {
   if (isIphoneX()) {
     return iphoneXStyle;
@@ -20,17 +33,6 @@ function getStatusBarHeight(safe) {
   });
 }
 
-function isIphoneX() {
-  const dimen = Dimensions.get("window");
-  return (
-    Platform.OS === "ios" &&
-    !Platform.isPad &&
-    !Platform.isTVOS &&
-    (dimen.height === 812 ||
-      dimen.width === 812 ||
-      dimen.height === 896 || dimen.width === 896)
-  );
-}
 
 let topPadding;
 if (Platform.OS === "ios") {
