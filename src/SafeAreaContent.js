@@ -13,6 +13,25 @@ function getStatusBarHeight(safe) {
   });
 }
 
+function isIphoneX() {
+  const dimen = Dimensions.get("window");
+  return (
+    Platform.OS === "ios" &&
+    !Platform.isPad &&
+    !Platform.isTVOS &&
+    (dimen.height === 812 ||
+      dimen.width === 812 ||
+      dimen.height === 896 || dimen.width === 896)
+  );
+}
+
+function ifIphoneX(iphoneXStyle, regularStyle) {
+  if (isIphoneX()) {
+    return iphoneXStyle;
+  }
+  return regularStyle;
+}
+
 let topPadding;
 if (Platform.OS === "ios") {
   topPadding = getStatusBarHeight() + 20;
