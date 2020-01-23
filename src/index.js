@@ -3,5 +3,5 @@ import { View, Platform, StyleSheet } from "react-native";
 import { ContentSafeArea } from "./SafeAreaContent";
 
 export const Content = ({ children, style }) => {
-  <ContentSafeArea>{children}</ContentSafeArea>;
+  return <ContentSafeArea>{children}</ContentSafeArea>;
 };
