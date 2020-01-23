@@ -1,0 +1,26 @@
+{
+  "name": "@brinkdevteam/react-native-content-container",
+  "version": "1.0.0",
+  "description": "Content wrapper to provide your content with a safe area on any phone and a TouchableWithoutFeedback",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brinkdevteam/react-native-content-container.git"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Aaron Brink <aaron@brinkdevteam.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brinkdevteam/react-native-content-container/issues"
+  },
+  "homepage": "https://github.com/brinkdevteam/react-native-content-container#readme",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
